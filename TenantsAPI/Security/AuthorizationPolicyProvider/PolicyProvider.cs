@@ -1,0 +1,48 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
+using StreamLine.Api.Security.AuthorizationRequirement;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using TenantsAPI.Helper.Constants;
+using TenantsAPI.Helper.Enums;
+using TenantsAPI.Helper.Extensions;
+
+namespace StreamLine.Api.Security.AuthorizationPolicyProvider
+{
+    internal class PolicyProvider : DefaultAuthorizationPolicyProvider
+    {
+        public PolicyProvider(IOptions<AuthorizationOptions> options) : base(options) { }
+
+        public override Task<AuthorizationPolicy> GetPolicyAsync(string fullPolicyName)
+        {
+            if (fullPolicyName.StartsWith(Permissions.PolicyPrefix, StringComparison.OrdinalIgnoreCase))
+            {
+            var policyData = fullPolicyName.Substring(Permissions.PolicyPrefix.Length).Split('|').ToList();
+
+            var permissionId = Convert.ToInt32(policyData[1]);
+               PermissionLevels permissionLevel = policyData[2].TryParseEnum<PermissionLevels>();
+            var policy = new AuthorizationPolicyBuilder();
+           // policy.AddRequirements(new PermissionRequirement(permissionId, permissionLevel));
+
+             return Task.FromResult(policy.Build());
+            }
+            else if (fullPolicyName.StartsWith(AuthorizePolicy.PolicyPrefix, StringComparison.OrdinalIgnoreCase))
+            {
+                var policyData = fullPolicyName.Substring(AuthorizePolicy.PolicyPrefix.Length).Split('|').ToList();
+                var code = policyData[1];
+              
+                var policy = new AuthorizationPolicyBuilder();
+                policy.AddRequirements(new AuthorizeRequirement(code));
+                return Task.FromResult(policy.Build());
+
+            }
+            else 
+            {
+                return base.GetPolicyAsync(fullPolicyName);
+            }
+
+         
+        }
+    }
+}
