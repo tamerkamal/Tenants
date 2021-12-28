@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TenantsAPI.Helper.Extensions;
-using TenantsAPI.Helpers.Configurations;
+using Tenants.Helpers.Extensions;
+using Tenants.Helpers.Configurations;
 
-namespace TenantsAPI
+namespace Tenants
 {
     public class Startup
     {

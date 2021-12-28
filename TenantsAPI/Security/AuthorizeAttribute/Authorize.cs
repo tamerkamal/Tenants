@@ -1,4 +1,4 @@
-﻿using TenantsAPI.Helper.Constants;
+﻿using Tenants.Helpers.Constants;
 
 namespace StreamLine.Api.Security.AuthorizeAttribute
 {

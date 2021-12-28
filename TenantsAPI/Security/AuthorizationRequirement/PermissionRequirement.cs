@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using TenantsAPI.Helper.Enums;
+using Tenants.Helpers.Enums;
 
 namespace StreamLine.Api.Security.AuthorizationRequirement
 {

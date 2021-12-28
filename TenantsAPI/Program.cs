@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace TenantsAPI
+namespace Tenants
 {
     public class Program
     {

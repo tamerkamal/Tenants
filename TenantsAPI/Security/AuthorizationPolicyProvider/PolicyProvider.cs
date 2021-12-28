@@ -4,9 +4,9 @@ using StreamLine.Api.Security.AuthorizationRequirement;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TenantsAPI.Helper.Constants;
-using TenantsAPI.Helper.Enums;
-using TenantsAPI.Helper.Extensions;
+using Tenants.Helpers.Constants;
+using Tenants.Helpers.Enums;
+using Tenants.Helpers.Extensions;
 
 namespace StreamLine.Api.Security.AuthorizationPolicyProvider
 {

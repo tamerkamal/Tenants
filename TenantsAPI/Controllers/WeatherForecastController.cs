@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tenants.TenantsModel.Dtos;
 
-namespace TenantsAPI.Controllers
+namespace Tenants.Controllers
 {
     [ApiController]
     [Route("[controller]")]

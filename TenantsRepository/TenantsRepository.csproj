@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TenantsEntity\TenantsEntity.csproj" />
+    <ProjectReference Include="..\TenantsInfrastructure\TenantsInfrastructure.csproj" />
+    <ProjectReference Include="..\TenantsModel\TenantsModel.csproj" />
+  </ItemGroup>
+
+</Project>

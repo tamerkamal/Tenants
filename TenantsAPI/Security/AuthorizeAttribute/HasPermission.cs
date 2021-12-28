@@ -1,5 +1,5 @@
-﻿using TenantsAPI.Helper.Constants;
-using TenantsAPI.Helper.Enums;
+﻿using Tenants.Helpers.Constants;
+using Tenants.Helpers.Enums;
 
 namespace StreamLine.Api.Security.AuthorizeAttribute
 {

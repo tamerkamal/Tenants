@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using StreamLine.Api.Security.AuthorizationRequirement;
 using System.Threading.Tasks;
-using TenantsAPI.Helper.Enums;
+using Tenants.Helpers.Enums;
 
 namespace StreamLine.Api.Security.AuthorizationHandler
 {
