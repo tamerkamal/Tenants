@@ -8,4 +8,8 @@
     <ProjectReference Include="..\TenantsRepository\Tenants.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CLasses\AWS\Cognito\" />
+  </ItemGroup>
+
 </Project>
