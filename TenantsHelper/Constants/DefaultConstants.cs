@@ -13,12 +13,12 @@
         /// <summary>
         /// Name of the Tenants Repository library
         /// </summary>
-        public const string TenantsRepositoryLibraryName = Tenants + "Repository";
+        public const string TenantsRepositoryLibraryName = Tenants + ".Repository";
 
         /// <summary>
         /// Name of the Tenants Service library
         /// </summary>
-        public const string TenantsServiceLibraryName = Tenants + "Service";
+        public const string TenantsServiceLibraryName = Tenants + ".Service";
 
         /// <summary>
         /// Name of the Tenants connection string

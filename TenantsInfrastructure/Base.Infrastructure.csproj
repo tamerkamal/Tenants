@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TenantsEntity\TenantsEntity.csproj" />
-    <ProjectReference Include="..\TenantsHelper\TenantsHelper.csproj" />
+    <ProjectReference Include="..\TenantsEntity\Tenants.Entity.csproj" />
+    <ProjectReference Include="..\TenantsHelper\Base.Helper.csproj" />
   </ItemGroup>
 
 </Project>
