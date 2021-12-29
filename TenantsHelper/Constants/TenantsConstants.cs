@@ -1,9 +1,9 @@
-﻿namespace Tenants.Helpers.Constants
+﻿namespace Base.Helpers.Constants
 {
     /// <summary>
     /// All hard-coded strings can be read as properties in the application
     /// </summary>
-    public static class DefaultConstants
+    public static class TenantsConstants
     {
         /// <summary>
         /// Prefix of the Tenants libraries

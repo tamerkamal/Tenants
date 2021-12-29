@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Tenants.Helpers.Enums;
+using Base.Helpers.Enums;
 
-namespace StreamLine.Api.Security.AuthorizationRequirement
+namespace Tenants.Api.Security.AuthorizationRequirement
 {
     internal class PermissionRequirement : IAuthorizationRequirement
     {

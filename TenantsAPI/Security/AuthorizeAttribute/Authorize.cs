@@ -1,6 +1,6 @@
-﻿using Tenants.Helpers.Constants;
+﻿using Base.Helpers.Constants;
 
-namespace StreamLine.Api.Security.AuthorizeAttribute
+namespace Tenants.Api.Security.AuthorizeAttribute
 {
 
     /// <summary>

@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     public static class EnumExtensions
     {

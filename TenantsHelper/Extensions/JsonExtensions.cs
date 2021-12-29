@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     public static class JsonExtensions
     {

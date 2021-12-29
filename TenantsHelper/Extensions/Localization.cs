@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     public class Localization
     {

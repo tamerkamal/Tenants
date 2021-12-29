@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace StreamLine.Api.Security.AuthorizationRequirement
+namespace Tenants.Api.Security.AuthorizationRequirement
 {
     internal class AuthorizeRequirement : IAuthorizationRequirement
     {

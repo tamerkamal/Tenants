@@ -1,4 +1,4 @@
-﻿namespace Tenants.Helpers.Constants
+﻿namespace Base.Helpers.Constants
 {
     /// <summary>
     /// All hard-coded strings can be read as properties in the application

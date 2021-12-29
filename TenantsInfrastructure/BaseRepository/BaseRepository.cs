@@ -6,11 +6,11 @@ using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Tenants.Helpers.Enums;
-using Tenants.Helpers.Extensions;
-using Tenants.Infrastructure.UnitOfWork;
+using Base.Helpers.Enums;
+using Base.Helpers.Extensions;
+using Base.Infrastructure.UnitOfWork;
 
-namespace Tenants.Infrastructure.BaseRepository
+namespace Base.Infrastructure.BaseRepository
 {
     /// <summary>
     /// Represents a default generic repository implements the <see cref="IBaseRepository{TEntity}"/> interface.

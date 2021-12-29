@@ -7,10 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
-using Tenants.Helpers.Models;
+using Base.Helpers.Models;
 using Tenants.Models.DbContexts;
 
-namespace Tenants.CustomMiddlewares
+namespace Base.CustomMiddlewares
 {
     /// <summary>
     /// Central error/exception handler Middleware

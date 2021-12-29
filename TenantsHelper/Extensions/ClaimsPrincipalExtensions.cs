@@ -1,8 +1,8 @@
-﻿using Tenants.Helpers.Constants;
+﻿using Base.Helpers.Constants;
 using System;
 using System.Security.Claims;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     /// <summary>
     /// Add extension methods to <see cref="ClaimsPrincipal"/>

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Tenants.Helpers.Models
+namespace Base.Helpers.Models
 {
     public class ErrorModel
     {

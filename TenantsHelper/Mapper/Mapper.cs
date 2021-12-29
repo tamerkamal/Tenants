@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace Tenants.Helpers.Mapper
+namespace Base.Helpers.Mapper
 {
     public class Mapper
     {

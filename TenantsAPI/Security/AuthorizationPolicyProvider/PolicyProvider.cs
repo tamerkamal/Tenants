@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
-using StreamLine.Api.Security.AuthorizationRequirement;
+using Tenants.Api.Security.AuthorizationRequirement;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Tenants.Helpers.Constants;
-using Tenants.Helpers.Enums;
-using Tenants.Helpers.Extensions;
+using Base.Helpers.Constants;
+using Base.Helpers.Enums;
+using Base.Helpers.Extensions;
 
-namespace StreamLine.Api.Security.AuthorizationPolicyProvider
+namespace Tenants.Api.Security.AuthorizationPolicyProvider
 {
     internal class PolicyProvider : DefaultAuthorizationPolicyProvider
     {

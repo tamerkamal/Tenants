@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     public class ApiClient
     {

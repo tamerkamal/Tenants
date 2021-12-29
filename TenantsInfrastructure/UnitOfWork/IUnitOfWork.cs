@@ -3,7 +3,7 @@ using System.Data;
 using System.Threading.Tasks;
 using Tenants.Models.DbContexts;
 
-namespace Tenants.Infrastructure.UnitOfWork
+namespace Base.Infrastructure.UnitOfWork
 {
     /// <summary>
     /// Exposes the unit of work interface.

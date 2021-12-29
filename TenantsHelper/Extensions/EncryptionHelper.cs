@@ -3,7 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     public static class EncryptionHelper
     {

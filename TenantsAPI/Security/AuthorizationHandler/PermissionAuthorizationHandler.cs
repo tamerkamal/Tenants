@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using StreamLine.Api.Security.AuthorizationRequirement;
+using Tenants.Api.Security.AuthorizationRequirement;
 using System.Threading.Tasks;
-using Tenants.Helpers.Enums;
+using Base.Helpers.Enums;
 
-namespace StreamLine.Api.Security.AuthorizationHandler
+namespace Tenants.Api.Security.AuthorizationHandler
 {
     internal class PermissionAuthorizationHandler //: AuthorizationHandler<PermissionRequirement>
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tenants.Helpers.Extensions
+namespace Base.Helpers.Extensions
 {
     public static class DateTimeExtensions
     {

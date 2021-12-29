@@ -1,4 +1,4 @@
-﻿namespace Tenants.Helpers.Constants
+﻿namespace Base.Helpers.Constants
 {
     public static class AuthorizePolicy
     {

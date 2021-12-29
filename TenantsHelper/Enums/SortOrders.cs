@@ -1,4 +1,4 @@
-﻿namespace Tenants.Helpers.Enums
+﻿namespace Base.Helpers.Enums
 {
     public enum SortOrders
     {

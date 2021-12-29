@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Tenants.Infrastructure.UnitOfWork;
+using Base.Infrastructure.UnitOfWork;
 using Tenants.Models.DbContexts;
 using Task = System.Threading.Tasks.Task;
 
-namespace Tenants.CustomMiddlewares
+namespace Base.CustomMiddlewares
 {
     /// <summary>
     /// One transaction per server roundtrip

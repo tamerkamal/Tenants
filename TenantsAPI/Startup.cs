@@ -1,9 +1,8 @@
+using Base.Helpers.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Tenants.Helpers.Extensions;
 using Tenants.Helpers.Configurations;
 
 namespace Tenants

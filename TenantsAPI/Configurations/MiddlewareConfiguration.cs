@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Tenants.CustomMiddlewares;
+using Base.CustomMiddlewares;
 
 namespace Tenants.Helpers.Configurations
 {

@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Tenants.Helpers.Extensions;
-using Tenants.Infrastructure.BaseRepository;
+using Base.Helpers.Extensions;
+using Base.Infrastructure.BaseRepository;
 using Tenants.Models.DbContexts;
 using Tenants.Models.Entities;
 
-namespace Tenants.Infrastructure.UnitOfWork
+namespace Base.Infrastructure.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Tenants.Helpers.Enums
+namespace Base.Helpers.Enums
 {
     public enum WorkerTypes
     {

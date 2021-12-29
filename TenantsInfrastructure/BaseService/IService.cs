@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tenants.Infrastructure.BaseService
+namespace Base.Infrastructure.BaseService
 {
     public interface IService : IDisposable
     {

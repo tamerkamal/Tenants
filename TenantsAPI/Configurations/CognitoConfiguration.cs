@@ -11,7 +11,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Tenants.Helpers.Constants;
+using Base.Helpers.Constants;
 
 namespace Tenants.Helpers.Configurations
 {

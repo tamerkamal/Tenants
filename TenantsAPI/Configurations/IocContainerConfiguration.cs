@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using StreamLine.Api.Security.AuthorizationHandler;
-using StreamLine.Api.Security.AuthorizationPolicyProvider;
+using Tenants.Api.Security.AuthorizationHandler;
+using Tenants.Api.Security.AuthorizationPolicyProvider;
 using System.Reflection;
-using Tenants.Helpers.Constants;
-using Tenants.Infrastructure.UnitOfWork;
+using Base.Helpers.Constants;
+using Base.Infrastructure.UnitOfWork;
 
 namespace Tenants.Helpers.Configurations
 {
@@ -27,10 +27,10 @@ namespace Tenants.Helpers.Configurations
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // Registers the repository layer using scrutor plugin
-            services.Scan(scan => scan.FromAssemblies(Assembly.Load(DefaultConstants.TenantsRepositoryLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
+            services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsRepositoryLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
 
             // Registers the service layer using scrutor plugin
-            services.Scan(scan => scan.FromAssemblies(Assembly.Load(DefaultConstants.TenantsServiceLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());           
+            services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsServiceLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());           
         }
     }
 }

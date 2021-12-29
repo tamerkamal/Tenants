@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Tenants.Helpers.Enums;
-using Tenants.Infrastructure.UnitOfWork;
+using Base.Helpers.Enums;
+using Base.Infrastructure.UnitOfWork;
 
-namespace Tenants.Infrastructure.BaseRepository
+namespace Base.Infrastructure.BaseRepository
 {
     /// <summary>
     /// Simple marker interface for cases where generic version is not needed.
