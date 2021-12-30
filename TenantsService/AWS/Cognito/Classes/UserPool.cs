@@ -5,7 +5,7 @@ using Tenants.Service.AWS.Cognito.Interfaces;
 
 namespace Tenants.Service.AWS.Cognito.CLasses
 {
-    public class UserPoolService : IUserPoolService
+    public class UserPool : IUserPool
     {
         #region Fields
 
@@ -15,7 +15,9 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
         #region Constructor
 
-        public UserPoolService(IAmazonCognitoIdentityProvider cognitoIdentityProvider)
+        public UserPool
+            (IAmazonCognitoIdentityProvider cognitoIdentityProvider
+            )
         {
             _cognitoIdentityProvider = cognitoIdentityProvider;
         }
@@ -42,6 +44,13 @@ namespace Tenants.Service.AWS.Cognito.CLasses
             return response;
         }
 
+        public async Task<ListUserPoolsResponse> ListUserPoolsAsync(ListUserPoolsRequest request)
+        {
+            ListUserPoolsResponse response = await _cognitoIdentityProvider.ListUserPoolsAsync(request);
+
+            return response;
+        }
+
         public async Task<UpdateUserPoolResponse> UpdateUserPoolAsync(UpdateUserPoolRequest request)
         {
             UpdateUserPoolResponse response = await _cognitoIdentityProvider.UpdateUserPoolAsync(request);
@@ -64,11 +73,56 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
         #endregion
 
+        #region UserPool Clients Operations
+
+        public async Task<CreateUserPoolClientResponse> CreateUserPoolClientAsync(CreateUserPoolClientRequest request)
+        {
+            CreateUserPoolClientResponse response = await _cognitoIdentityProvider.CreateUserPoolClientAsync(request);
+
+            return response;
+        }
+        public async Task<ListUserPoolClientsResponse> ListUserPoolClientsAsync(ListUserPoolClientsRequest request)
+        {
+            ListUserPoolClientsResponse response = await _cognitoIdentityProvider.ListUserPoolClientsAsync(request);
+
+            return response;
+        }
+
+        public async Task<UpdateUserPoolClientResponse> UpdateUserPoolClientAsync(UpdateUserPoolClientRequest request)
+        {
+            UpdateUserPoolClientResponse response = await _cognitoIdentityProvider.UpdateUserPoolClientAsync(request);
+
+            return response;
+        }
+
+        public async Task<DeleteUserPoolClientResponse> DeleteUserPoolClientAsync(DeleteUserPoolClientRequest request)
+        {
+            DeleteUserPoolClientResponse response = await _cognitoIdentityProvider.DeleteUserPoolClientAsync(request);
+
+            return response;
+        }
+
+        #endregion
+
         #region Users Operations
 
         public async Task<AdminCreateUserResponse> AdminCreateUserAsync(AdminCreateUserRequest request)
         {
             AdminCreateUserResponse response = await _cognitoIdentityProvider.AdminCreateUserAsync(request);
+
+            return response;
+        }
+
+        public async Task<SignUpResponse> SignUpAsync(SignUpRequest request)
+        {
+            SignUpResponse response = await _cognitoIdentityProvider.SignUpAsync(request);
+
+            return response;
+        }
+
+        public async Task<AdminConfirmSignUpResponse> AdminConfirmSignUpAsync(AdminConfirmSignUpRequest request)
+        {
+            AdminConfirmSignUpResponse response = await _cognitoIdentityProvider.AdminConfirmSignUpAsync(request);
 
             return response;
         }
@@ -86,26 +140,26 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
             return response;
         }
-        
+
         public async Task<AdminSetUserPasswordResponse> AdminSetUserPasswordAsync(AdminSetUserPasswordRequest request)
         {
             AdminSetUserPasswordResponse response = await _cognitoIdentityProvider.AdminSetUserPasswordAsync(request);
 
             return response;
-        }        
+        }
         public async Task<AdminResetUserPasswordResponse> AdminResetUserPasswordAsync(AdminResetUserPasswordRequest request)
         {
             AdminResetUserPasswordResponse response = await _cognitoIdentityProvider.AdminResetUserPasswordAsync(request);
 
             return response;
-        }   
+        }
         public async Task<AdminSetUserMFAPreferenceResponse> AdminSetUserMFAPreferenceAsync(AdminSetUserMFAPreferenceRequest request)
         {
             AdminSetUserMFAPreferenceResponse response = await _cognitoIdentityProvider.AdminSetUserMFAPreferenceAsync(request);
 
             return response;
         }
-          public async Task<SetUserMFAPreferenceResponse> SetUserMFAPreferenceAsync(SetUserMFAPreferenceRequest request)
+        public async Task<SetUserMFAPreferenceResponse> SetUserMFAPreferenceAsync(SetUserMFAPreferenceRequest request)
         {
             SetUserMFAPreferenceResponse response = await _cognitoIdentityProvider.SetUserMFAPreferenceAsync(request);
 
@@ -127,7 +181,7 @@ namespace Tenants.Service.AWS.Cognito.CLasses
         {
             AdminDeleteUserAttributesResponse response = await _cognitoIdentityProvider.AdminDeleteUserAttributesAsync(request);
             return response;
-        }   
+        }
         public async Task<AdminDisableUserResponse> AdminDisableUserAsync(AdminDisableUserRequest request)
         {
             AdminDisableUserResponse response = await _cognitoIdentityProvider.AdminDisableUserAsync(request);
@@ -179,6 +233,37 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
         #endregion
 
+        #region ResouceServers Operations
+
+        public async Task<CreateResourceServerResponse> CreateResourceServerAsync(CreateResourceServerRequest request)
+        {
+            CreateResourceServerResponse response = await _cognitoIdentityProvider.CreateResourceServerAsync(request);
+
+            return response;
+        }
+        public async Task<ListResourceServersResponse> ListResourceServersAsync(ListResourceServersRequest request)
+        {
+            ListResourceServersResponse response = await _cognitoIdentityProvider.ListResourceServersAsync(request);
+
+            return response;
+        }
+        
+        public async Task<UpdateResourceServerResponse> UpdateResourceServerAsync(UpdateResourceServerRequest request)
+        {
+            UpdateResourceServerResponse response = await _cognitoIdentityProvider.UpdateResourceServerAsync(request);
+
+            return response;
+        }
+        
+        public async Task<DeleteResourceServerResponse> DeleteResourceServerAsync(DeleteResourceServerRequest request)
+        {
+            DeleteResourceServerResponse response = await _cognitoIdentityProvider.DeleteResourceServerAsync(request);
+
+            return response;
+        }
+
+        #endregion
+
         #region UserGroups Opertions
 
         public async Task<AdminAddUserToGroupResponse> AdminAddUserToGroupAsync(AdminAddUserToGroupRequest request)
@@ -201,6 +286,17 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
             return response;
         }
+
+        #endregion
+
+        #region Tokens
+
+        public async Task<RevokeTokenResponse> RevokeTokenAsync(RevokeTokenRequest request)
+        {
+            RevokeTokenResponse response = await _cognitoIdentityProvider.RevokeTokenAsync(request);
+
+            return response;
+        }       
 
         #endregion
 

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Tenants.Service.AWS.Cognito.Interfaces
 {
-    public interface IUserPoolService:IService
+    public interface IUserPool:IService
     {
         Task<CreateUserPoolResponse> CreateUserPoolAsync(CreateUserPoolRequest request);
         Task<UpdateUserPoolResponse> UpdateUserPoolAsync(UpdateUserPoolRequest request);
