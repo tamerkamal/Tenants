@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Base.Helpers.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
@@ -7,8 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
-using Base.Helpers.Models;
-using Tenants.Models.DbContexts;
+using Tenants.Entity.DbContexts;
 
 namespace Base.CustomMiddlewares
 {
@@ -37,7 +37,7 @@ namespace Base.CustomMiddlewares
         /// <param name="environment">IWebHostEnvironment</param>
         /// <param name="dbContext">The database context</param>
         /// <returns></returns>
-        public async System.Threading.Tasks.Task Invoke(HttpContext httpContext, IWebHostEnvironment environment, TenantsDbContext dbContext)
+        public async System.Threading.Tasks.Task Invoke(HttpContext httpContext, IWebHostEnvironment environment, MasterDbContext dbContext)
         {
             try
             {

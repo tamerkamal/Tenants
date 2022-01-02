@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Base.Infrastructure.UnitOfWork;
-using Tenants.Models.DbContexts;
+using Tenants.Entity.DbContexts;
 using Task = System.Threading.Tasks.Task;
 
 namespace Base.CustomMiddlewares
@@ -29,7 +28,7 @@ namespace Base.CustomMiddlewares
         /// <param name="httpContext">The http context.</param>
         /// <param name="dbContext">The database context</param>
         /// <returns></returns>
-        public async Task Invoke(HttpContext httpContext, TenantsDbContext dbContext)
+        public async Task Invoke(HttpContext httpContext, MasterDbContext dbContext)
         {
             // This for allow cross Origin
             httpContext.Response.Headers.Add("Access-Control-Allow-Credentials", new[] { "true" });

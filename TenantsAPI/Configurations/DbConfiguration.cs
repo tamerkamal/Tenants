@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Base.Helper.Constants;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Base.Helpers.Constants;
-using Tenants.Models.DbContexts;
+using Tenants.Entity.DbContexts;
 
 namespace Tenants.Helpers.Configurations
 {
@@ -18,9 +18,10 @@ namespace Tenants.Helpers.Configurations
         /// <param name="configuration">The configuration.</param>
         public static void ConfigureService(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<TenantsDbContext>(options => options
-                .UseSqlServer(configuration.GetConnectionString(TenantsConstants.TenantsConnection), sqlServerOptions => sqlServerOptions.CommandTimeout(180))
-                .EnableDetailedErrors()
+            services.AddDbContext<MasterDbContext>(
+                      options => options.UseSqlServer(configuration.GetConnectionString(DbConnections.MasterDbConnection),
+                                                      sqlServerOptions => sqlServerOptions.CommandTimeout(180))
+                    .EnableDetailedErrors()
             );
         }
     }

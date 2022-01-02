@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenants.API", "TenantsAPI\T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenants.Repository", "TenantsRepository\Tenants.Repository.csproj", "{21424306-669A-4EF1-95BF-15804A16877E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenants.Service", "TenantsService\Tenants.Service.csproj", "{D1FBEE25-2461-43A1-BBE5-B5D7766EBAB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS.Service", "TenantsService\AWS.Service.csproj", "{D1FBEE25-2461-43A1-BBE5-B5D7766EBAB4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenants.Entity", "TenantsEntity\Tenants.Entity.csproj", "{46931DC1-FFDC-49F2-91F6-6259D6CA0D9A}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{47CE757F-942B-4E5A-9F6B-DBDAC7B61F23}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{5489D28D-E8F8-4857-AFA1-284F8518CB17}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenants.Service", "tenants.service\Tenants.Service.csproj", "{E24473BA-21D0-4A9A-82A2-B43117672BB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{E39AE063-766B-4E91-AC63-C38AAC94FE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E39AE063-766B-4E91-AC63-C38AAC94FE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E39AE063-766B-4E91-AC63-C38AAC94FE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24473BA-21D0-4A9A-82A2-B43117672BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24473BA-21D0-4A9A-82A2-B43117672BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24473BA-21D0-4A9A-82A2-B43117672BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24473BA-21D0-4A9A-82A2-B43117672BB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{EE1E459C-73FE-48A2-9D44-D21B9095469B} = {5489D28D-E8F8-4857-AFA1-284F8518CB17}
 		{EF0E3319-77B3-4C10-A47B-4883D00DC44F} = {5489D28D-E8F8-4857-AFA1-284F8518CB17}
 		{47CE757F-942B-4E5A-9F6B-DBDAC7B61F23} = {5489D28D-E8F8-4857-AFA1-284F8518CB17}
+		{E24473BA-21D0-4A9A-82A2-B43117672BB8} = {47CE757F-942B-4E5A-9F6B-DBDAC7B61F23}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5CB12C24-E2FD-47DA-A9A8-6D2835FC092E}

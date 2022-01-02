@@ -1,9 +1,12 @@
+using Amazon.APIGateway;
 using Base.Helpers.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Tenants.Helpers.Configurations;
+using Tenants.Service.AWS.APIGateway.Classes;
+using Tenants.Service.AWS.APIGateway.Interfaces;
 
 namespace Tenants
 {
@@ -19,7 +22,6 @@ namespace Tenants
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //if (_environment.IsDevelopment())
             {
                 // Cognito authentication configuration
                 CognitoConfiguration.ConfigureService(services);
@@ -34,7 +36,7 @@ namespace Tenants
             DbConfiguration.ConfigureService(services, Configuration);
 
             // Add DI (Dependency Injection) / IOC containers
-            IocContainerConfiguration.ConfigureService(services);
+            IocContainerConfiguration.ConfigureService(services,Configuration);
 
             // Add and configure mvc core feature
             MvcCoreConfiguration.ConfigureService(services, Configuration);

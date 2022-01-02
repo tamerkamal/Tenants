@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace Tenants.Models.Entities
+namespace Tenants.Entity.Models
 {
     public partial class Worker
     {
@@ -115,7 +116,7 @@ namespace Tenants.Models.Entities
         public string FullName { get; set; }
         public string FullNameBySurname { get; set; }
         public bool RequireTraining { get; set; }
-        
+
 
         //public virtual Company WorkerCompany { get; set; }
         //public virtual WorkerType WorkerType { get; set; }

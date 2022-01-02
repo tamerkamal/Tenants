@@ -5,7 +5,7 @@ using Tenants.Service.AWS.Cognito.Interfaces;
 
 namespace Tenants.Service.AWS.Cognito.CLasses
 {
-    public class UserPool : IUserPool
+    public class UserPoolService : IUserPoolService
     {
         #region Fields
 
@@ -15,9 +15,7 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
         #region Constructor
 
-        public UserPool
-            (IAmazonCognitoIdentityProvider cognitoIdentityProvider
-            )
+        public UserPoolService(IAmazonCognitoIdentityProvider cognitoIdentityProvider)
         {
             _cognitoIdentityProvider = cognitoIdentityProvider;
         }
@@ -291,12 +289,12 @@ namespace Tenants.Service.AWS.Cognito.CLasses
 
         #region Tokens
 
-        public async Task<RevokeTokenResponse> RevokeTokenAsync(RevokeTokenRequest request)
-        {
-            RevokeTokenResponse response = await _cognitoIdentityProvider.RevokeTokenAsync(request);
+        //public async Task<RevokeTokenResponse> RevokeTokenAsync(RevokeTokenRequest request)
+        //{
+        //    RevokeTokenResponse response = await _cognitoIdentityProvider.RevokeTokenAsync(request);
 
-            return response;
-        }       
+        //    return response;
+        //}       
 
         #endregion
 

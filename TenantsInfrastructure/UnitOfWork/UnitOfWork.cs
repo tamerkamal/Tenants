@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Base.Helpers.Extensions;
+using Base.Infrastructure.BaseRepository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -7,10 +9,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Base.Helpers.Extensions;
-using Base.Infrastructure.BaseRepository;
-using Tenants.Models.DbContexts;
-using Tenants.Models.Entities;
+using Tenants.Entity.DbContexts;
+using Tenants.Entity.Models;
 
 namespace Base.Infrastructure.UnitOfWork
 {
@@ -49,7 +49,7 @@ namespace Base.Infrastructure.UnitOfWork
         /// <summary>
         /// Gets the underlying database context
         /// </summary>
-        public TenantsDbContext Context { get; }
+        public MasterDbContext Context { get; }
 
         #endregion
 
@@ -60,7 +60,7 @@ namespace Base.Infrastructure.UnitOfWork
         /// </summary>
         /// <param name="context">The object context</param>
         /// <param name="httpContextAccessor">IHttpContextAccessor</param>
-        public UnitOfWork(TenantsDbContext context, IHttpContextAccessor httpContextAccessor)
+        public UnitOfWork(MasterDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             Context = context ?? throw new ArgumentNullException(nameof(context));
             _httpContextAccessor = httpContextAccessor;

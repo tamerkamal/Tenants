@@ -1,10 +1,10 @@
 ﻿using Amazon.CognitoIdentityProvider.Model;
-using Base.Infrastructure.BaseService;
+using System;
 using System.Threading.Tasks;
 
 namespace Tenants.Service.AWS.Cognito.Interfaces
 {
-    public interface IUserPool:IService
+    public interface IUserPoolService:IDisposable
     {
         Task<CreateUserPoolResponse> CreateUserPoolAsync(CreateUserPoolRequest request);
         Task<UpdateUserPoolResponse> UpdateUserPoolAsync(UpdateUserPoolRequest request);

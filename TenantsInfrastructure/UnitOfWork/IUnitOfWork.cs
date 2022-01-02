@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Threading.Tasks;
-using Tenants.Models.DbContexts;
+using Tenants.Entity.DbContexts;
 
 namespace Base.Infrastructure.UnitOfWork
 {
@@ -17,7 +17,7 @@ namespace Base.Infrastructure.UnitOfWork
         /// <summary>
         /// Gets the underlying database context
         /// </summary>
-        TenantsDbContext Context { get; }
+        MasterDbContext Context { get; }
 
         /// <summary>
         /// Strongly typed repository resolution method using the IoC container

@@ -1,26 +1,37 @@
-﻿using Amazon.APIGateway;
+﻿using Amazon;
+using Amazon.APIGateway;
 using Amazon.APIGateway.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Amazon.Runtime;
+using AWS.Service.APIGateway.Models;
+using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 using Tenants.Service.AWS.APIGateway.Interfaces;
 
 namespace Tenants.Service.AWS.APIGateway.Classes
 {
-    public class APIGatewayService : IAPIGateway
+    public class APIGatewayService : IAPIGatewayService
     {
         #region Fields
 
         public readonly IAmazonAPIGateway _amazonAPIGateway;
+        public readonly AwsApiGatewaySettings _settings;
 
         #endregion
 
         #region Constructor
 
-        public APIGatewayService(IAmazonAPIGateway amazonAPIGateway)
+        public APIGatewayService(IOptions<AwsApiGatewaySettings> settings)
         {
-            _amazonAPIGateway = amazonAPIGateway;
+            // Receive setting from app-settings.json
+            _settings = settings.Value;
+
+            // Initialize RegionEndpoint.
+            var region = RegionEndpoint.GetBySystemName(_settings.Region);
+
+            // Initialize credentials.
+            var credentials = new BasicAWSCredentials(_settings.ID,null);
+
+            _amazonAPIGateway = new AmazonAPIGatewayClient(credentials, region);
         }
 
         #endregion

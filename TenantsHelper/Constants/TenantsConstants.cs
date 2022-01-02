@@ -18,11 +18,6 @@
         /// <summary>
         /// Name of the Tenants Service library
         /// </summary>
-        public const string TenantsServiceLibraryName = Tenants + ".Service";
-
-        /// <summary>
-        /// Name of the Tenants connection string
-        /// </summary>
-        public const string TenantsConnection = nameof(TenantsConnection);
+        public const string TenantsServiceLibraryName = Tenants + ".Service";    
     }
 }

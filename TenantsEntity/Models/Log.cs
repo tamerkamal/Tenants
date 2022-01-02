@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Tenants.Models.Entities
+namespace Tenants.Entity.Models
 {
     public partial class Log
     {

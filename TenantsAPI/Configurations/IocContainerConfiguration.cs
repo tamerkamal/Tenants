@@ -1,15 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Tenants.Api.Security.AuthorizationHandler;
-using Tenants.Api.Security.AuthorizationPolicyProvider;
-using System.Reflection;
+﻿using AWS.Service.APIGateway.Models;
 using Base.Helpers.Constants;
 using Base.Infrastructure.UnitOfWork;
-using Tenants.Service.AWS.APIGateway.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using Tenants.Api.Security.AuthorizationHandler;
+using Tenants.Api.Security.AuthorizationPolicyProvider;
 using Tenants.Service.AWS.APIGateway.Classes;
-using Tenants.Service.AWS.Cognito.CLasses;
-using Tenants.Service.AWS.Cognito.Interfaces;
+using Tenants.Service.AWS.APIGateway.Interfaces;
 
 namespace Tenants.Helpers.Configurations
 {
@@ -22,22 +22,43 @@ namespace Tenants.Helpers.Configurations
         /// Configures the service.
         /// </summary>
         /// <param name="services">The services.</param>
-        public static void ConfigureService(IServiceCollection services)
+        public static void ConfigureService(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
-            services.AddScoped<IAuthorizationHandler, AuthorizationHandler>();
-            services.AddSingleton<IAuthorizationPolicyProvider, PolicyProvider>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            #region Register Services
 
-            //services.AddScoped<IAPIGatewayService, APIGatewayService>();
-            //services.AddScoped<IUserPoolService, UserPoolService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IAuthorizationPolicyProvider, PolicyProvider>();
+
+            services.AddScoped<IAuthorizationHandler, AuthorizationHandler>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAPIGatewayService, APIGatewayService>();
+
+            #region register Scoped Layers
 
             // Registers the repository layer using scrutor plugin
             services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsRepositoryLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
 
             // Registers the service layer using scrutor plugin
-            services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsServiceLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());           
+            services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsServiceLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
+
+            #endregion
+
+            #endregion
+
+            #region Register Cognito Identity Provider
+
+            //Adds Amazon Cognito as Identity Provider
+            services.AddCognitoIdentity();
+
+            #endregion        
+
+            #region Add appsettings Config objects 
+
+            services.Configure<AwsApiGatewaySettings>(configuration.GetSection(nameof(AwsApiGatewaySettings)));
+
+            #endregion
+
+           
         }
     }
 }
