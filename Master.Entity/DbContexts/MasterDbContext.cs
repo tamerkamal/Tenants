@@ -39,6 +39,12 @@ namespace Master.Entity.DbContexts
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
 
                 entity.Property(e => e.ExpiresOn).HasColumnType("datetime");
+
+                entity.HasOne(d => d.Tier)
+                    .WithMany(p => p.Subscription)
+                    .HasForeignKey(d => d.TierId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Subscription_Tier");
             });
 
             modelBuilder.Entity<Tenant>(entity =>
@@ -50,7 +56,7 @@ namespace Master.Entity.DbContexts
                 entity.Property(e => e.CognitoApiresourceIds)
                     .IsRequired()
                     .HasColumnName("CognitoAPIResourceIds")
-                    .HasMaxLength(200)
+                    .HasMaxLength(600)
                     .IsUnicode(false);
 
                 entity.Property(e => e.CognitoClientId)
@@ -74,10 +80,20 @@ namespace Master.Entity.DbContexts
                     .HasMaxLength(200)
                     .IsUnicode(false);
 
+                entity.Property(e => e.DbConnectionString)
+                    .HasMaxLength(600)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.SubDomain)
                     .IsRequired()
                     .HasMaxLength(200)
                     .IsUnicode(false);
+
+                entity.HasOne(d => d.Subscription)
+                    .WithMany(p => p.Tenant)
+                    .HasForeignKey(d => d.SubscriptionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Tenant_Subscription");
             });
 
             modelBuilder.Entity<Tier>(entity =>
