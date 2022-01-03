@@ -1,5 +1,6 @@
 ﻿using Base.Helpers.Extensions;
 using Base.Infrastructure.BaseRepository;
+using Master.Entity.DbContexts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -9,7 +10,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Tenants.Entity.DbContexts;
 using Tenants.Entity.Models;
 
 namespace Base.Infrastructure.UnitOfWork
@@ -25,22 +25,22 @@ namespace Base.Infrastructure.UnitOfWork
 
         #region Private Properties     
 
-        private int WorkerId
-        {
-            get
-            {
-                // Get logged-in username
-                var userName = _httpContextAccessor.HttpContext.User.GetLoggedInUserName();
-                if (string.IsNullOrEmpty(userName))
-                    throw new ArgumentNullException($"Current username cannot be empty.");
+        //private int WorkerId
+        //{
+        //    get
+        //    {
+        //        // Get logged-in username
+        //        var userName = _httpContextAccessor.HttpContext.User.GetLoggedInUserName();
+        //        if (string.IsNullOrEmpty(userName))
+        //            throw new ArgumentNullException($"Current username cannot be empty.");
 
-                // Return workerId
-                return Context.Set<Worker>().AsNoTracking()
-                    .Where(a => a.UserName.ToLower() == userName.ToLower())
-                    .Select(a => a.WorkerId)
-                    .FirstOrDefault();
-            }
-        }
+        //        // Return workerId
+        //        return Context.Set<Worker>().AsNoTracking()
+        //            .Where(a => a.UserName.ToLower() == userName.ToLower())
+        //            .Select(a => a.WorkerId)
+        //            .FirstOrDefault();
+        //    }
+        //}
 
         #endregion
 
@@ -157,17 +157,17 @@ namespace Base.Infrastructure.UnitOfWork
 
         private void TrackChanges()
         {
-            var workerId = WorkerId;
+            //var workerId = WorkerId;
             var entries = Context.ChangeTracker.Entries().ToList();
             var addedEntities = entries.Where(p => p.State == EntityState.Added).ToList();
             var modifiedEntities = entries.Where(p => p.State == EntityState.Modified).ToList();
 
             // Set audit columns
-            SetAddedAuditColumns(addedEntities, workerId);
+            //SetAddedAuditColumns(addedEntities, workerId);
             SetModifiedAuditColumns(modifiedEntities);
 
             // Insert log changes
-            InsertLogChanges(modifiedEntities, workerId);
+            //InsertLogChanges(modifiedEntities, workerId);
         }
 
         private static void SetAddedAuditColumns(IEnumerable<EntityEntry> entries, int workerId)

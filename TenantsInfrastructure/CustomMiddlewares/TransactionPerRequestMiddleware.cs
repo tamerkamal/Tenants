@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Master.Entity.DbContexts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Tenants.Entity.DbContexts;
 using Task = System.Threading.Tasks.Task;
 
 namespace Base.CustomMiddlewares

@@ -1,8 +1,8 @@
 ﻿using Base.Helper.Constants;
+using Master.Entity.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Tenants.Entity.DbContexts;
 
 namespace Tenants.Helpers.Configurations
 {

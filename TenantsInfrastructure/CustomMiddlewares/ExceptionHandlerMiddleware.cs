@@ -1,4 +1,5 @@
 ﻿using Base.Helpers.Models;
+using Master.Entity.DbContexts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
@@ -8,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
-using Tenants.Entity.DbContexts;
 
 namespace Base.CustomMiddlewares
 {

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Master.Entity.DbContexts;
+using System;
 using System.Data;
 using System.Threading.Tasks;
-using Tenants.Entity.DbContexts;
 
 namespace Base.Infrastructure.UnitOfWork
 {

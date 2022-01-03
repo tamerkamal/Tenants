@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tenants.Entity.DbContexts
+namespace Master.Entity.DbContexts
 {
     public class MasterDbContext : DbContext
     {
