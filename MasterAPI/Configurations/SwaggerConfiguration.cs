@@ -26,7 +26,7 @@ namespace Master.Helpers.Configurations
                 {
                     Version = "v1.0.0",
                     Title = "Master API Documentation",
-                    Description = "Welcome to Tenants Portal",
+                    Description = "Welcome to Master Portal",
                     Contact = new OpenApiContact { Name = "tech2", Email = "techsupport@tech2.com.au" },
                     TermsOfService = new Uri("https://www.tech2.com.au/about-tech2/terms-conditions"),
                     License = new OpenApiLicense { Name = "MIT", Url = new Uri("https://www.tech2.com.au/about-tech2/privacy-policy") }
@@ -35,7 +35,7 @@ namespace Master.Helpers.Configurations
                 {
                     Version = "v1.0.0",
                     Title = "Master Integration API Documentation",
-                    Description = "Welcome to Tenants API",
+                    Description = "Welcome to Master API",
                     Contact = new OpenApiContact { Name = "tech2", Email = "techsupport@tech2.com.au" },
                     TermsOfService = new Uri("https://www.tech2.com.au/about-tech2/terms-conditions"),
                     License = new OpenApiLicense { Name = "MIT", Url = new Uri("https://www.tech2.com.au/about-tech2/privacy-policy") }
