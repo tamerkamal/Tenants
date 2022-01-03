@@ -3,7 +3,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Compact;
 
-namespace Tenants.Helpers.Configurations
+namespace Master.Helpers.Configurations
 {
     /// <summary>
     /// Configure Serilog for the application

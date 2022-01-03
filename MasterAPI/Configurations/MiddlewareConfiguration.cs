@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Base.CustomMiddlewares;
 
-namespace Tenants.Helpers.Configurations
+namespace Master.Helpers.Configurations
 {
     /// <summary>
     /// Configure middleware for the application

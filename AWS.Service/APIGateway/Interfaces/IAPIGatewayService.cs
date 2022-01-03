@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tenants.Service.AWS.APIGateway.Interfaces
+namespace Master.Service.AWS.APIGateway.Interfaces
 {
     public interface IAPIGatewayService:IDisposable
     {

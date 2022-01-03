@@ -1,9 +1,9 @@
 ﻿using Amazon.CognitoIdentityProvider;
 using Amazon.CognitoIdentityProvider.Model;
 using System.Threading.Tasks;
-using Tenants.Service.AWS.Cognito.Interfaces;
+using Master.Service.AWS.Cognito.Interfaces;
 
-namespace Tenants.Service.AWS.Cognito.CLasses
+namespace Master.Service.AWS.Cognito.CLasses
 {
     public class UserPoolService : IUserPoolService
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Base.Helpers.Enums;
 
-namespace Tenants.Api.Security.AuthorizationRequirement
+namespace Master.Api.Security.AuthorizationRequirement
 {
     internal class PermissionRequirement : IAuthorizationRequirement
     {

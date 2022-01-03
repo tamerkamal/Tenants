@@ -1,7 +1,7 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Tenants.Helpers.Configurations
+namespace Master.Helpers.Configurations
 {
     /// <summary>
     /// Configure fluent validation for the application

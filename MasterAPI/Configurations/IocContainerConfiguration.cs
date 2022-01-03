@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using Tenants.Api.Security.AuthorizationHandler;
-using Tenants.Api.Security.AuthorizationPolicyProvider;
-using Tenants.Service.AWS.APIGateway.Classes;
-using Tenants.Service.AWS.APIGateway.Interfaces;
+using Master.Api.Security.AuthorizationHandler;
+using Master.Api.Security.AuthorizationPolicyProvider;
+using Master.Service.AWS.APIGateway.Classes;
+using Master.Service.AWS.APIGateway.Interfaces;
 
-namespace Tenants.Helpers.Configurations
+namespace Master.Helpers.Configurations
 {
     /// <summary>
     /// IOC Container start-up configuration

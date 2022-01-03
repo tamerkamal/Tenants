@@ -1,6 +1,6 @@
 using System;
 
-namespace Tenants.TenantsModel.Dtos
+namespace Master.TenantsModel.Dtos
 {
     public class WeatherForecast
     {

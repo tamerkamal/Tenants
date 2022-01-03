@@ -5,9 +5,9 @@ using Amazon.Runtime;
 using AWS.Service.APIGateway.Models;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
-using Tenants.Service.AWS.APIGateway.Interfaces;
+using Master.Service.AWS.APIGateway.Interfaces;
 
-namespace Tenants.Service.AWS.APIGateway.Classes
+namespace Master.Service.AWS.APIGateway.Classes
 {
     public class APIGatewayService : IAPIGatewayService
     {

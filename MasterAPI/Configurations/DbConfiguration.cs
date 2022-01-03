@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Tenants.Helpers.Configurations
+namespace Master.Helpers.Configurations
 {
     /// <summary>
     /// Configurations related to entity framework

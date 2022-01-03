@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tenants.Entity.Models
+namespace Master.Entity.Models
 {
     public partial class Log
     {

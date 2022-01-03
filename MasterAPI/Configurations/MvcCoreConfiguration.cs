@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using System;
 using System.IO.Compression;
 
-namespace Tenants.Helpers.Configurations
+namespace Master.Helpers.Configurations
 {
     /// <summary>
     /// Configure MVC Core for the application

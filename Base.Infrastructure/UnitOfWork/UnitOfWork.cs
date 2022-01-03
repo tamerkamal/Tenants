@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Tenants.Entity.Models;
+using Master.Entity.Models;
 
 namespace Base.Infrastructure.UnitOfWork
 {

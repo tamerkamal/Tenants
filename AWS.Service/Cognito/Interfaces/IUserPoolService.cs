@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Tenants.Service.AWS.Cognito.Interfaces
+namespace Master.Service.AWS.Cognito.Interfaces
 {
     public interface IUserPoolService:IDisposable
     {

@@ -1,7 +1,7 @@
 ﻿using Base.Helpers.Constants;
 using Base.Helpers.Enums;
 
-namespace Tenants.Api.Security.AuthorizeAttribute
+namespace Master.Api.Security.AuthorizeAttribute
 {
     /// <summary>
     /// 

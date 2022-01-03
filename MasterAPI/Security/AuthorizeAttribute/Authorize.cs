@@ -1,6 +1,6 @@
 ﻿using Base.Helpers.Constants;
 
-namespace Tenants.Api.Security.AuthorizeAttribute
+namespace Master.Api.Security.AuthorizeAttribute
 {
 
     /// <summary>

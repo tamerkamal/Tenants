@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Tenants.Api.Security.AuthorizationRequirement;
+using Master.Api.Security.AuthorizationRequirement;
 using System.Threading.Tasks;
 
-namespace Tenants.Api.Security.AuthorizationHandler
+namespace Master.Api.Security.AuthorizationHandler
 {
     internal class AuthorizationHandler : AuthorizationHandler<AuthorizeRequirement>
     {
