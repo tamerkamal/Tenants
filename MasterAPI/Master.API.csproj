@@ -22,9 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tenants.service\Tenants.Service.csproj" />
-    <ProjectReference Include="..\TenantsInfrastructure\Base.Infrastructure.csproj" />
-    <ProjectReference Include="..\TenantsModel\Tenants.DTO.csproj" />
+    <ProjectReference Include="..\Base.Infrastructure\Base.Infrastructure.csproj" />
+    <ProjectReference Include="..\Master.Service\Master.Service.csproj" />
   </ItemGroup>
 
 

@@ -36,10 +36,10 @@ namespace Tenants.Helpers.Configurations
             #region register Scoped Layers
 
             // Registers the repository layer using scrutor plugin
-            services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsRepositoryLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
+            services.Scan(scan => scan.FromAssemblies(Assembly.Load(MasterConstants.RepositoryLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
 
             // Registers the service layer using scrutor plugin
-            services.Scan(scan => scan.FromAssemblies(Assembly.Load(TenantsConstants.TenantsServiceLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
+            services.Scan(scan => scan.FromAssemblies(Assembly.Load(MasterConstants.ServiceLibraryName))?.AddClasses().AsMatchingInterface().WithScopedLifetime());
 
             #endregion
 

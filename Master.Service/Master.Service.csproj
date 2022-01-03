@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TenantsRepository\Tenants.Repository.csproj" />
-    <ProjectReference Include="..\TenantsService\AWS.Service.csproj" />
+    <ProjectReference Include="..\AWS.Service\AWS.Service.csproj" />
+    <ProjectReference Include="..\Master.Repository\Master.Repository.csproj" />
   </ItemGroup>
 
 </Project>

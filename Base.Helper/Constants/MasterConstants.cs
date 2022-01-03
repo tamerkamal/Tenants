@@ -3,21 +3,21 @@
     /// <summary>
     /// All hard-coded strings can be read as properties in the application
     /// </summary>
-    public static class TenantsConstants
+    public static class MasterConstants
     {
         /// <summary>
         /// Prefix of the Tenants libraries
         /// </summary>
-        public const string Tenants = nameof(Tenants);
+        public const string Master = nameof(Master);
 
         /// <summary>
         /// Name of the Tenants Repository library
         /// </summary>
-        public const string TenantsRepositoryLibraryName = Tenants + ".Repository";
+        public const string RepositoryLibraryName = Master + ".Repository";
 
         /// <summary>
         /// Name of the Tenants Service library
         /// </summary>
-        public const string TenantsServiceLibraryName = Tenants + ".Service";    
+        public const string ServiceLibraryName = Master + ".Service";    
     }
 }

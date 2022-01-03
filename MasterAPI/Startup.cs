@@ -1,12 +1,9 @@
-using Amazon.APIGateway;
 using Base.Helpers.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Tenants.Helpers.Configurations;
-using Tenants.Service.AWS.APIGateway.Classes;
-using Tenants.Service.AWS.APIGateway.Interfaces;
 
 namespace Tenants
 {
