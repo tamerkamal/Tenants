@@ -25,7 +25,7 @@ namespace Master.Helpers.Configurations
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1.0.0",
-                    Title = "Tenants API Documentation",
+                    Title = "Master API Documentation",
                     Description = "Welcome to Tenants Portal",
                     Contact = new OpenApiContact { Name = "tech2", Email = "techsupport@tech2.com.au" },
                     TermsOfService = new Uri("https://www.tech2.com.au/about-tech2/terms-conditions"),
@@ -34,7 +34,7 @@ namespace Master.Helpers.Configurations
                 c.SwaggerDoc("integration", new OpenApiInfo
                 {
                     Version = "v1.0.0",
-                    Title = "Tenants Integration API Documentation",
+                    Title = "Master Integration API Documentation",
                     Description = "Welcome to Tenants API",
                     Contact = new OpenApiContact { Name = "tech2", Email = "techsupport@tech2.com.au" },
                     TermsOfService = new Uri("https://www.tech2.com.au/about-tech2/terms-conditions"),
@@ -100,7 +100,7 @@ namespace Master.Helpers.Configurations
             // Specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.DocumentTitle = "Tenants API Documentation";
+                c.DocumentTitle = "Master API Documentation";
                 c.DefaultModelExpandDepth(2);
                 c.DefaultModelRendering(ModelRendering.Model);
                 c.DefaultModelsExpandDepth(-1);
@@ -113,8 +113,8 @@ namespace Master.Helpers.Configurations
                 c.ShowExtensions();
                 c.EnableValidator();
                 c.SupportedSubmitMethods(SubmitMethod.Get, SubmitMethod.Post, SubmitMethod.Delete, SubmitMethod.Put, SubmitMethod.Head);
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tenants API Documentation v1.0.0");
-                c.SwaggerEndpoint("/swagger/integration/swagger.json", "Tenants API Documentation v1.0.0");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Master API Documentation v1.0.0");
+                c.SwaggerEndpoint("/swagger/integration/swagger.json", "Master API Documentation v1.0.0");
                 c.RoutePrefix= string.Empty;
             });
         }
