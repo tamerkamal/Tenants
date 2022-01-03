@@ -26,5 +26,9 @@
     <ProjectReference Include="..\Master.Service\Master.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 
 </Project>

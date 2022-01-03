@@ -10,6 +10,8 @@ using Master.Api.Security.AuthorizationHandler;
 using Master.Api.Security.AuthorizationPolicyProvider;
 using Master.Service.AWS.APIGateway.Classes;
 using Master.Service.AWS.APIGateway.Interfaces;
+using Master.Service.AWS.Cognito.Interfaces;
+using Master.Service.AWS.Cognito.CLasses;
 
 namespace Master.Helpers.Configurations
 {
@@ -28,10 +30,12 @@ namespace Master.Helpers.Configurations
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IAuthorizationPolicyProvider, PolicyProvider>();
-
             services.AddScoped<IAuthorizationHandler, AuthorizationHandler>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            
             services.AddScoped<IAPIGatewayService, APIGatewayService>();
+            services.AddScoped<IUserPoolService, UserPoolService>();
 
             #region register Scoped Layers
 
@@ -56,9 +60,7 @@ namespace Master.Helpers.Configurations
 
             services.Configure<AwsApiGatewaySettings>(configuration.GetSection(nameof(AwsApiGatewaySettings)));
 
-            #endregion
-
-           
+            #endregion           
         }
     }
 }

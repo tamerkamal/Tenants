@@ -6,17 +6,17 @@
     public static class MasterConstants
     {
         /// <summary>
-        /// Prefix of the Tenants libraries
+        /// Prefix of the Master libraries
         /// </summary>
         public const string Master = nameof(Master);
 
         /// <summary>
-        /// Name of the Tenants Repository library
+        /// Name of the Master Repository library
         /// </summary>
         public const string RepositoryLibraryName = Master + ".Repository";
 
         /// <summary>
-        /// Name of the Tenants Service library
+        /// Name of the Master Service library
         /// </summary>
         public const string ServiceLibraryName = Master + ".Service";    
     }

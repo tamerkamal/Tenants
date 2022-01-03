@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TenantsService.Interfaces
+namespace Master.Service.Interfaces
 {
-    public interface ITest1Service
+    public interface ITenantService: IDisposable
     {
     }
 }
