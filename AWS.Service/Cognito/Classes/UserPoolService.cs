@@ -239,6 +239,7 @@ namespace Master.Service.AWS.Cognito.CLasses
 
             return response;
         }
+
         public async Task<ListResourceServersResponse> ListResourceServersAsync(ListResourceServersRequest request)
         {
             ListResourceServersResponse response = await _cognitoIdentityProvider.ListResourceServersAsync(request);

@@ -11,7 +11,7 @@ namespace Master.Entity.Models
         }
 
         public int SubscriptionId { get; set; }
-        public byte[] CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime ExpiresOn { get; set; }
         public int TierId { get; set; }

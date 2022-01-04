@@ -29,5 +29,14 @@ namespace Master.Service.AWS.Cognito.Interfaces
         Task<AdminAddUserToGroupResponse> AdminAddUserToGroupAsync(AdminAddUserToGroupRequest request);
         Task<AdminListGroupsForUserResponse> AdminListGroupsForUserAsync(AdminListGroupsForUserRequest request);
         Task<AdminRemoveUserFromGroupResponse> AdminRemoveUserFromGroupAsync(AdminRemoveUserFromGroupRequest request);
+        Task<CreateUserPoolClientResponse> CreateUserPoolClientAsync(CreateUserPoolClientRequest request);
+        Task<ListUserPoolClientsResponse> ListUserPoolClientsAsync(ListUserPoolClientsRequest request);
+        Task<UpdateUserPoolClientResponse> UpdateUserPoolClientAsync(UpdateUserPoolClientRequest request);
+        Task<DeleteUserPoolClientResponse> DeleteUserPoolClientAsync(DeleteUserPoolClientRequest request);
+        Task<SignUpResponse> SignUpAsync(SignUpRequest request);
+        Task<CreateResourceServerResponse> CreateResourceServerAsync(CreateResourceServerRequest request);
+        Task<ListResourceServersResponse> ListResourceServersAsync(ListResourceServersRequest request);
+        Task<UpdateResourceServerResponse> UpdateResourceServerAsync(UpdateResourceServerRequest request);
+        Task<DeleteResourceServerResponse> DeleteResourceServerAsync(DeleteResourceServerRequest request);
     }
 }
