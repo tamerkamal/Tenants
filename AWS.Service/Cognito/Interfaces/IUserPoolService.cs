@@ -38,5 +38,6 @@ namespace Master.Service.AWS.Cognito.Interfaces
         Task<ListResourceServersResponse> ListResourceServersAsync(ListResourceServersRequest request);
         Task<UpdateResourceServerResponse> UpdateResourceServerAsync(UpdateResourceServerRequest request);
         Task<DeleteResourceServerResponse> DeleteResourceServerAsync(DeleteResourceServerRequest request);
+        Task<ListUserPoolsResponse> ListUserPoolsAsync(ListUserPoolsRequest request);
     }
 }
